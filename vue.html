@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice Vue.JS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<h1>Aditionneur</h1>
+<div id="additionner">
+
+    <input type="text" v-model="nb1">
+    +
+    <input type="text" v-model="nb2">
+    =
+    <label>{{resultat(nb1,nb2)}}</label>
+</div>
+
+<h1>Nombre Magique</h1>
+
+<div id="nbmag">
+    <p>{{consigne}}</p>
+    <hr>
+    <input type="text" v-model="nombre">
+    <p>{{reponse}}</p>
+    <button v-on:click="verif(nombre)">Vérifier</button>
+
+
+</div>
+<h1>Calculatrice</h1>
+<div id="calcul" >
+
+    <p>{{res}}</p>
+    <hr>
+    <table style="width: 10%">
+        <tr>
+            <td class="calculatrice"  v-on:click="nombre(1)">1</td>
+            <td class="calculatrice"  v-on:click="nombre(2)">2</td>
+            <td class="calculatrice"  v-on:click="nombre(3)">3</td>
+        </tr>
+        <tr>
+            <td class="calculatrice"  v-on:click="nombre(4)">4</td>
+            <td class="calculatrice"  v-on:click="nombre(5)">5</td>
+            <td class="calculatrice"  v-on:click="nombre(6)">6</td>
+        </tr>
+        <tr>
+            <td class="calculatrice"  v-on:click="nombre(7)">7</td>
+            <td class="calculatrice"  v-on:click="nombre(8)">8</td>
+            <td class="calculatrice"  v-on:click="nombre(9)">9</td>
+        </tr>
+        <tr>
+            <td class="calculatrice"  v-on:click="nombre('+')">+</td>
+            <td class="calculatrice"  v-on:click="nombre('-')">-</td>
+            <td class="calculatrice"  v-on:click="total()">=</td>
+        </tr>
+    </table>
+</div>
+<h1>Panneaux</h1>
+<div id="panneau">
+
+    <div id="panneau1" v-show="panneau1">
+        bonjour Panneau1
+        <button v-on:click="inverse(2)">On change</button>
+    </div>
+    <div id="panneau2" v-show="panneau2">
+        bonsoir Panneau2
+        <button v-on:click="inverse(1)">On change</button>
+    </div>
+
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
+
+
+</html>

@@ -1,0 +1,19 @@
+.calculatrice
+{
+    background: linear-gradient(15deg,#b3b3b3,#ccc);
+    border: 1px solid #111;
+    cursor: pointer;
+}
+.calculatrice:active
+{
+    outline: darkblue;
+}
+#panneau2
+{
+    background-color: darkred;
+}
+
+#panneau1
+{
+    background-color: blueviolet;
+}
